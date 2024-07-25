@@ -1,0 +1,14 @@
+pipeline {
+    agent any  // Runs on any available agent (node/agent)
+
+    stages {
+        stage('Hello') {
+            steps {
+                script {
+                    def helloWorld = 'Hello, World!'
+                    echo "The greeting is: ${helloWorld}"
+                }
+            }
+        }
+    }
+}
